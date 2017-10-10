@@ -5,7 +5,10 @@ import { connect } from 'react-redux';
 
 import type { Narrow } from '../types';
 import boundActions from '../boundActions';
-import MainTabs from '../main/MainTabs';
+
+import SubscriptionsContainer from '../streams/SubscriptionsContainer';
+
+
 
 const componentStyles = StyleSheet.create({
   container: {
@@ -40,11 +43,9 @@ class Sidebar extends PureComponent {
 
     return (
       <View style={[componentStyles.container, paddingStyles, styles.background]}>
-        <MainTabs
-          screenProps={{
-            doNarrowCloseDrawer: this.doNarrowCloseDrawer,
-            closeDrawer: this.closeDrawer,
-          }}
+        <SubscriptionsContainer 
+          doNarrowCloseDrawer={this.doNarrowCloseDrawer} 
+          closeDrawer={this.closeDrawer}
         />
       </View>
     );
