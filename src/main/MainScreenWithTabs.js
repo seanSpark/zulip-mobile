@@ -4,9 +4,7 @@ import { StyleSheet, View } from 'react-native';
 
 import { ZulipStatusBar } from '../common';
 import MainNavBar from '../nav/MainNavBar';
-
-import SubscriptionsContainer from '../streams/SubscriptionsContainer';
-
+import MainTabs from './MainTabs';
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -21,7 +19,7 @@ export default class MainScreenWithTabs extends PureComponent {
       <View style={styles.wrapper}>
         <ZulipStatusBar />
         <MainNavBar />
-        <SubscriptionsContainer />
+        <MainTabs />
       </View>
     );
   }
