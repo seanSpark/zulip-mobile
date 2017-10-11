@@ -28,6 +28,18 @@ export const apiCall = async (
   shouldTimeout: boolean = true,
 ) => {
   try {
+    console.log( "Auth: " );
+    console.log( auth );
+
+    console.log( "route: " );
+    console.log( route );
+
+    console.log( "params: " );
+    console.log( params );
+
+    console.log( "params body:" );
+    console.log( params.body );
+
     networkActivityStart(isSilent);
     const response = await apiFetch(auth, route, params);
 

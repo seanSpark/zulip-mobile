@@ -1,6 +1,6 @@
 /* @flow */
 import React, { PureComponent } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View , Button} from 'react-native';
 import { connect } from 'react-redux';
 
 import type { Narrow } from '../types';
@@ -26,6 +26,9 @@ class Sidebar extends PureComponent {
     const { actions, navigation } = this.props;
     navigation.navigate('DrawerClose');
     setTimeout(() => actions.doNarrow(narrow), 0);
+
+    console.log( this );
+    console.log( this.props );
   };
 
   closeDrawer = () => {
@@ -43,10 +46,7 @@ class Sidebar extends PureComponent {
 
     return (
       <View style={[componentStyles.container, paddingStyles, styles.background]}>
-        <SubscriptionsContainer 
-          doNarrowCloseDrawer={this.doNarrowCloseDrawer} 
-          closeDrawer={this.closeDrawer}
-        />
+        <Button onPress={this.props.actions.navigateToStreamSelector} title="Colleagues"></Button>
       </View>
     );
   }

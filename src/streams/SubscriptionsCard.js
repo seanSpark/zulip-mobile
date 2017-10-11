@@ -18,11 +18,11 @@ export default class SubscriptionsContainer extends PureComponent {
     narrow: Narrow,
     subscriptions: SubscriptionsState,
     unreadByStream: number[],
-    doNarrowCloseDrawer: (narrow: Narrow) => void,
+    doNarrow: (narrow: Narrow) => void,
   };
 
   handleNarrow = (streamName: string) => {
-    this.props.doNarrowCloseDrawer(streamNarrow(streamName));
+    this.props.doNarrow(streamNarrow(streamName));
   };
 
   render() {

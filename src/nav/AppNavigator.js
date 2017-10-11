@@ -1,3 +1,15 @@
+// The AppNavigator is the end-all be-all screen holder. All main screens appear here.
+
+// If you are adding a new "state", it should be added here. 
+
+
+
+
+
+
+
+
+
 /* TODO flow */
 import { StackNavigator } from 'react-navigation';
 
@@ -20,6 +32,7 @@ import TimingScreen from '../diagnostics/TimingScreen';
 import StorageScreen from '../diagnostics/StorageScreen';
 import LightboxScreen from '../lightbox/LightboxScreen';
 import GroupScreen from '../group/GroupScreen';
+import StreamsScreen from '../streams/StreamsScreen';
 
 export default StackNavigator(
   {
@@ -42,9 +55,10 @@ export default StackNavigator(
     variables: { screen: VariablesScreen },
     timing: { screen: TimingScreen },
     storage: { screen: StorageScreen },
+    streams : { screen: StreamsScreen },
   },
   {
-    initialRouteName: 'main',
+    initialRouteName: 'streams',
     headerMode: 'none',
     cardStyle: {
       backgroundColor: 'white',

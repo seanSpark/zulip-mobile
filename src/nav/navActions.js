@@ -8,6 +8,9 @@ export const resetNavigation = (): Action => ({
   type: RESET_NAVIGATION,
 });
 
+
+export const navigateToStreamSelector = (): Action => NavigationActions.navigate({ routeName: 'streams'});
+
 export const navigateBack = (): Action => NavigationActions.back();
 
 export const navigateToChat = (): Action => NavigationActions.navigate({ routeName: 'chat' });
